@@ -14,6 +14,8 @@ For bug reports, feature requests, or general questions, please open an issue in
 
 We read every issue and respond as quickly as we can.
 
+If you prefer email, you can also reach us at **support@nautika.app** (replace with your real address).
+
 ---
 
 ## Features
@@ -45,7 +47,7 @@ We read every issue and respond as quickly as we can.
 
 ## System requirements
 
-- macOS 13.5 or later
+- macOS 13.0 or later
 - Apple silicon or Intel
 
 ---
@@ -63,6 +65,24 @@ mdtool opens any plain-text file with a markdown extension: `.md`, `.markdown`, 
 
 ### Why does editing a large file cause a brief flicker?
 The preview reloads whenever the document changes, and very large files (hundreds of KB) can take a moment to re-render. This is expected. Future versions may add incremental updates.
+
+### Can I open files or folders from Terminal?
+Yes. Save the following as `/usr/local/bin/mdtool` (or anywhere on your `PATH`) and make it executable:
+
+```sh
+#!/bin/sh
+# Open a folder (or file) in the mdtool Mac app.
+#   mdtool            -> opens the current working directory
+#   mdtool path/...   -> opens that folder or file
+if [ $# -eq 0 ]; then
+    target="$PWD"
+else
+    target="$1"
+fi
+exec /usr/bin/open -a mdtool "$target"
+```
+
+Then run `chmod +x /usr/local/bin/mdtool`. After that, `mdtool`, `mdtool notes/`, and `mdtool README.md` all launch the app on the given path.
 
 ### How do I report a bug?
 Open an issue at https://github.com/nautikasupport/mdtool/issues with:
@@ -94,7 +114,7 @@ mdtool requests the following macOS sandbox permissions:
 - **User-selected file read/write** — so you can open and save your markdown files.
 - **Outgoing connections** — required by macOS for WebKit to render the preview; no actual network requests are made by the app.
 
-If you have any questions about privacy, open an issue in this repository.
+If you have any questions about privacy, open an issue in this repository or contact **support@nautika.app**.
 
 Last updated: 2026-04-07
 
