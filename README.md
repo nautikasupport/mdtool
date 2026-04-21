@@ -14,7 +14,7 @@ For bug reports, feature requests, or general questions, please open an issue in
 
 We read every issue and respond as quickly as we can.
 
-If you prefer email, you can also reach us at **support@nautika.app** (replace with your real address).
+If you prefer email, you can also reach us at **support@nautika.corp**
 
 ---
 
