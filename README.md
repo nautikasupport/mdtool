@@ -14,8 +14,6 @@ For bug reports, feature requests, or general questions, please open an issue in
 
 We read every issue and respond as quickly as we can.
 
-If you prefer email, you can also reach us at **support@nautika.corp**
-
 ---
 
 ## Features
@@ -114,7 +112,7 @@ mdtool requests the following macOS sandbox permissions:
 - **User-selected file read/write** — so you can open and save your markdown files.
 - **Outgoing connections** — required by macOS for WebKit to render the preview; no actual network requests are made by the app.
 
-If you have any questions about privacy, open an issue in this repository or contact **support@nautika.app**.
+If you have any questions about privacy, open an issue in this repository.
 
 Last updated: 2026-04-07
 
